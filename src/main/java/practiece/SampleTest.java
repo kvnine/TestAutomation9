@@ -11,7 +11,8 @@ public class SampleTest {
         String url = "https://demo.guru99.com/test/newtours/index.php";
         String username = "test";
         String password = "test";
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\KVR\\selenium\\TestAutomation\\BrowserDrivers\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "BrowserDrivers/chromedriver.exe");
+//        System.setProperty("webdriver.chrome.driver", "C:\\Users\\KVR\\selenium\\TestAutomation\\BrowserDrivers\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.get(url);
         driver.findElement(By.xpath("//input[@name='userName']")).sendKeys(username);
