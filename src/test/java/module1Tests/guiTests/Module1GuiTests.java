@@ -47,9 +47,9 @@ public class Module1GuiTests {
             }
 
             new WebDriverWait(webDriver, Duration.ofSeconds(10)).
-                    until(ExpectedConditions.textToBePresentInElement(module1Page.getSubscribersCount(),
+                    until(ExpectedConditions.textToBePresentInElement(module1Page.subscribersCount,
                             "subscribers"));
-            String[] content = module1Page.getSubscribersCount().getText().split("subscribers");
+            String[] content = module1Page.subscribersCount.getText().split("subscribers");
             System.out.println(dateTime + ", " + content[0].trim
                     () + ", " + "subscribers - kundabaddalu2.0");
 
@@ -58,7 +58,7 @@ public class Module1GuiTests {
                 TextFileUtility.appendContentToTextFile(dateTime + ", " + content[0].trim() + ", " + "subscribers - kundabaddalu2.0");
             }
             i = i + 1;
-//            Thread.sleep(900000);//Every 15 mins
+            Thread.sleep(5000);//Every 5 mins
 
         }
 
